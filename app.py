@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import os
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
+pw="Sanju#1202@"
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -65,7 +66,7 @@ if st.session_state.role is None:
             username = st.text_input("Username")
             password = st.text_input("Password", type="password")
             if st.button("Sign In", use_container_width=True):
-                if username.lower() == "admin" and password == "Admin#123":
+                if username.lower() == "admin" and password == pw:
                     st.session_state.role = "admin"
                     st.rerun()
                 elif username.lower() != "admin" and is_login_enabled() and password == "Login#123":
