@@ -4,7 +4,15 @@ from datetime import datetime, timedelta
 import os
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
-
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            footer {visibility: hidden;}
+            .stAppDeployButton {display: none;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 # ---------------- CONFIG & STYLING ---------------- #
 st.set_page_config(page_title="ProQuiz | Dark Edition", layout="wide", page_icon="🎓")
 
